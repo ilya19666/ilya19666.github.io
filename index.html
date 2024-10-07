@@ -1,12 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website of Ilya!!!</title>
-</head>
-<body>
-    <h1>Welcome to My Website, friends!!!</h1>
-    <p>This site is hosted on GitHub Pages!</p>
-</body>
-</html>
+    <script>
+      window.topInit = function () {
+      Touchpoint.initialize({
+        // Please check documentation for other Touchpoint settings that can be configured
+        settings:{
+          containerStyle: {
+            borderRadius: '8px',
+            boxShadow:
+            '0px 3px 5px 0px rgba(0,0,0,0.2), 0px 1px 18px 0px rgba(0,0,0,0.12), 0px 6px 10px 0px rgba(0,0,0,0.14)'
+          }
+        },
+        visitor: {
+          // Pass data points from your site/application to identify the current respondent
+          // id: VISITOR_ID,
+          // email: VISITOR_EMAIL,
+          // role: VISITOR_ROLE,
+          // etc.
+        },
+        user_attributes: {
+          // Define attribute data types to be used for targeting.
+          // Dates must be in ISO 8601 format
+          // age: 'number',
+          // country: 'string',
+          // purchase_date: 'date',
+          // is_active_user: 'boolean'
+          // etc.
+        },
+        publisher: {
+          // Please do not make edits below
+          app_id: "6pvs7gkK1Wd93po9",
+          pod: "eu2",
+        },
+      });
+    };
+  </script>
+  <script async defer src="https://touchpoint-sdk.alida.com/main.js"></script>
