@@ -12,9 +12,9 @@
         },
         visitor: {
           // Pass data points from your site/application to identify the current respondent
-          table: TABLE_NAME,
-          license: LICENSE,
-          language: LANGUAGE,
+          table: getTable(),
+          license: getLicense(),
+          language: getLanguage(),
           // etc.
         },
         user_attributes: {
