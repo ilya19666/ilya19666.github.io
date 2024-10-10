@@ -1,7 +1,6 @@
 
     <script>
       window.topInit = function () {
-       //   alert(window.starsweb.app.site);
       Touchpoint.initialize({
         // Please check documentation for other Touchpoint settings that can be configured
         settings:{
@@ -10,14 +9,15 @@
             boxShadow:
             '0px 3px 5px 0px rgba(0,0,0,0.2), 0px 1px 18px 0px rgba(0,0,0,0.12), 0px 6px 10px 0px rgba(0,0,0,0.14)'
           },
-          locale: 'fr'
+          locale: window.starsweb.app.locale,
         },
         visitor: {
           //license: window.starsweb.app.site,
-          license: '2344',  
+            license: 1234
         },
         user_attributes: {
-          license: '2344',  
+          //license: window.starsweb.app.site,  
+            license: 'number',
         },
         publisher: {
           // Please do not make edits below
