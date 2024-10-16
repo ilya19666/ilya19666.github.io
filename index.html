@@ -48,8 +48,6 @@
         },
       });
     };
-    window.addEventListener('click', function (e) {alert("beforeunload");});
-    window.onclose = function(){ alert("onclose");};
-         window.onunload = function(){ alert("onunload");};
+    window.addEventListener('click', function (e) {alert(e.target);});
   </script>
   <script async defer src="https://touchpoint-sdk.alida.com/main.js"></script>
