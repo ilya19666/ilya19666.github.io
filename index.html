@@ -1,4 +1,4 @@
-
+<head>
     <script>
       window.topInit = function () {
 //          alert(window.starsweb.app.csatTournKey)
@@ -53,3 +53,11 @@
     window.addEventListener('unload', function (e) {alert('unload');window.starsweb.app.closeCsat();});
   </script>
   <script async defer src="https://touchpoint-sdk.alida.com/main.js"></script>
+  <script>
+      function  onUnload()
+      {
+          alert('unload');window.starsweb.app.closeCsat();
+      }
+  </script>
+</head>
+<body onunload="onUnload()"></body>
