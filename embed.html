@@ -1,3 +1,27 @@
+<script defer>
+  if (window.Touchpoint) {
+    const embeddedDistURL = window.Touchpoint.getEmbeddedDistURL();
+    if (embeddedDistURL) {
+        // Show the embedded distribution in an whichever web element you wish
+        // e.g document.getElementById("<<web element ID>>").src = embeddedDistURL
+    } else {
+        // Hide the iframe or web element that was supposed to contain the embedded distribution
+        // e.g document.getElementById("<<web element ID>>").style.display = 'none'
+    }
+  } else {
+    window.addEventListener("TouchpointLoaded", function() {
+      const embeddedDistURL = window.Touchpoint.getEmbeddedDistURL();
+    if (embeddedDistURL) {
+        // Show the embedded distribution in whichever web element you wish
+        // e.g document.getElementById("<<web element ID>>").src = embeddedDistURL
+    } else {
+        // Hide the iframe or web element that was supposed to contain the embedded distribution
+        // e.g document.getElementById("<<web element ID>>").style.display = 'none'
+    }
+    });
+  }
+</script>
+
 /*  
   if (window.Touchpoint) {
     //alert('window.Touchpoint');
