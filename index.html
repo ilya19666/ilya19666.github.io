@@ -1,4 +1,4 @@
-
+<head>
 <script>
   window.topInit = function () {
       Touchpoint.initialize({
@@ -50,24 +50,34 @@
 <script async defer src="https://touchpoint-sdk.alida.com/main.js"></script>
 <script defer>
   if (window.Touchpoint) {
+    alert('window.Touchpoint');
     const embeddedDistURL = window.Touchpoint.getEmbeddedDistURL();
     if (embeddedDistURL) {
         // Show the embedded distribution in an whichever web element you wish
         // e.g document.getElementById("<<web element ID>>").src = embeddedDistURL
+      alert(embeddedDistURL);
     } else {
         // Hide the iframe or web element that was supposed to contain the embedded distribution
-        // e.g document.getElementById("<<web element ID>>").style.display = 'none'
+        // e.g 
+      document.getElementById("main-frame").style.display = 'none'
     }
   } else {
     window.addEventListener("TouchpointLoaded", function() {
+        alert('NOT window.Touchpoint');
       const embeddedDistURL = window.Touchpoint.getEmbeddedDistURL();
     if (embeddedDistURL) {
         // Show the embedded distribution in whichever web element you wish
         // e.g document.getElementById("<<web element ID>>").src = embeddedDistURL
+      alert(embeddedDistURL);
     } else {
         // Hide the iframe or web element that was supposed to contain the embedded distribution
         // e.g document.getElementById("<<web element ID>>").style.display = 'none'
+      document.getElementById("main-frame").style.display = 'none'
     }
     });
   }
 </script>
+</head>
+<body id="main-frame">
+  
+</body>
