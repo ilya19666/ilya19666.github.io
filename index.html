@@ -1,5 +1,5 @@
 <head>
-<script>
+<script defer>
   window.topInit = function () {
       Touchpoint.initialize({
     // Please check documentation for other Touchpoint settings that can be configured
@@ -46,9 +46,30 @@
     },
   });
 };
+
+  if (window.Touchpoint) {
+    const embeddedDistURL = window.Touchpoint.getEmbeddedDistURL();
+    if (embeddedDistURL) {
+        document.getElementById("main-content").src = embeddedDistURL;
+    } else {
+        // Hide the iframe or web element that was supposed to contain the embedded distribution
+        // e.g document.getElementById("<<web element ID>>").style.display = 'none'
+    }
+  } else {
+    window.addEventListener("TouchpointLoaded", function() {
+      const embeddedDistURL = window.Touchpoint.getEmbeddedDistURL();
+    if (embeddedDistURL) {
+        document.getElementById("main-content").src = embeddedDistURL;
+    } else {
+        // Hide the iframe or web element that was supposed to contain the embedded distribution
+        // e.g document.getElementById("<<web element ID>>").style.display = 'none'
+    }
+    });
+  }  
+  
 </script>
 <script async defer src="https://touchpoint-sdk.alida.com/main.js"></script>
 </head>
 <body>
-  
+  <iframe id="main-content" style="postition:absolute; width: 200px; height: 400px;">
 </body>
