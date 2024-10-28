@@ -1,9 +1,7 @@
 <head>
 <script defer>
 
- if (window.Touchpoint) {
- 
- // window.topInit = function () {
+ window.topInit = function () {
        window.Touchpoint.initialize({
     // Please check documentation for other Touchpoint settings that can be configured
     settings:{
@@ -48,9 +46,9 @@
       pod: "eu2",
     },
   });
-//};
+};
 
-
+ if (window.Touchpoint) {
  
     const embeddedDistURL = window.Touchpoint.getEmbeddedDistURL();
    
