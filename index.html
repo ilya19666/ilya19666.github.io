@@ -1,58 +1,8 @@
 <head>
-<script>
-  window.topInit = function () {
-      Touchpoint.initialize({
-    // Please check documentation for other Touchpoint settings that can be configured
-    settings:{
-      containerStyle: {
-        borderRadius: '8px',
-        boxShadow:
-        '0px 3px 5px 0px rgba(0,0,0,0.2), 0px 1px 18px 0px rgba(0,0,0,0.12), 0px 6px 10px 0px rgba(0,0,0,0.14)'
-      },
-      locale: window.starsweb.app.locale,
-      
-      //  locale: "fr"
-    },
-    visitor: {
-       license: window.starsweb.app.site,
-       gameMode: window.starsweb.app.csatGameMode,
-       pokerType: window.starsweb.app.csatPoker,
-       gameSize: window.starsweb.app.csatGameSize,
-       tableSize: window.starsweb.app.csatTableSize,
-       rm_pm: window.starsweb.app.csatRM_PM,
-       tournamentKey: window.starsweb.app.csatTournKey,
-     
-       //license: 1234,
-       //gameMode: 'cash',  
-       //pokerType: 'NLholdem',
-       //gameSize: 'Micro',
-       //tableSize: 9,
-       //rm_pm: false,
-       //tournamentKey: 0,
-    },
-    user_attributes: {
-        license: 'number',
-        gameMode: 'string',
-        gameMode: 'string',
-        gameMode: 'string',
-        gameMode: 'number',
-        gameMode: 'boolean',
-        gameMode: 'number',
-    },
-    publisher: {
-      // Please do not make edits below
-      app_id: "VL1fb5EKAjaDyyOq",
-      pod: "eu2",
-    },
-  });
-};
-</script>
-  
 <script defer>
  
-  if (window.Touchpoint) {
-
-     Touchpoint.initialize({
+  window.topInit = function () {
+       window.Touchpoint.initialize({
     // Please check documentation for other Touchpoint settings that can be configured
     settings:{
       containerStyle: {
@@ -62,7 +12,7 @@
       },
       //locale: window.starsweb.app.locale,
       
-        locale: "en"
+       locale: "fr"
     },
     visitor: {
       // license: window.starsweb.app.site,
@@ -94,8 +44,9 @@
       // Please do not make edits below
       app_id: "VL1fb5EKAjaDyyOq",
       pod: "eu2",
-  }
-     }); 
+    },
+  });
+};
    
     const embeddedDistURL = window.Touchpoint.getEmbeddedDistURL();
    
