@@ -1,5 +1,7 @@
 <head>
 <script defer>
+
+ if (window.Touchpoint) {
  
   window.topInit = function () {
        window.Touchpoint.initialize({
@@ -12,7 +14,7 @@
       },
       //locale: window.starsweb.app.locale,
       
-       locale: "fr"
+       locale: "ru"
     },
     visitor: {
       // license: window.starsweb.app.site,
@@ -49,7 +51,7 @@
 };
 
 
-  if (window.Touchpoint) {
+ 
     const embeddedDistURL = window.Touchpoint.getEmbeddedDistURL();
    
     if (embeddedDistURL) {
