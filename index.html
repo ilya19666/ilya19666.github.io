@@ -1,10 +1,7 @@
 <head>
 <script defer>
   window.topInit = function () {
-
        Touchpoint.initialize({
-
-     //   alert("TEST")
     // Please check documentation for other Touchpoint settings that can be configured
     settings:{
       containerStyle: {
@@ -53,15 +50,8 @@
 };
 
   if (window.Touchpoint) {
-
-    
-
-     alert("TEST");
-    
-    
-    
-    
     const embeddedDistURL = window.Touchpoint.getEmbeddedDistURL();
+    alert(embeddedDistURL);
     if (embeddedDistURL) {
         document.getElementById("main-content").src = embeddedDistURL;
     } else {
