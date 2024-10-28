@@ -1,7 +1,13 @@
 <head>
 <script defer>
   window.topInit = function () {
-      Touchpoint.initialize({
+      
+};
+
+  if (window.Touchpoint) {
+
+    
+   Touchpoint.initialize({
 
      //   alert("TEST")
     // Please check documentation for other Touchpoint settings that can be configured
@@ -46,10 +52,12 @@
       app_id: "VL1fb5EKAjaDyyOq",
       pod: "eu2",
     },
-  });
-};
-
-  if (window.Touchpoint) {
+  }); 
+    
+    
+    
+    
+    
     const embeddedDistURL = window.Touchpoint.getEmbeddedDistURL();
     if (embeddedDistURL) {
         document.getElementById("main-content").src = embeddedDistURL;
