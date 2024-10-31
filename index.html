@@ -52,7 +52,7 @@
 };
 
  if (window.Touchpoint) {
-       concole.log('window.Touchpoint');
+       alarm('window.Touchpoint');
     const embeddedDistURL = window.Touchpoint.getEmbeddedDistURL();
    
     if (embeddedDistURL) {
@@ -63,7 +63,7 @@
     }
   } else {
     
-         concole.log('NOT window.Touchpoint');
+         alarm('NOT window.Touchpoint');
 
   window.addEventListener("TouchpointLoaded", function() {
       const embeddedDistURL = window.Touchpoint.getEmbeddedDistURL();
