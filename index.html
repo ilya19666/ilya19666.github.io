@@ -1,12 +1,8 @@
 <head>
 <script defer>
-
  window.topInit = function () {
        window.Touchpoint.initialize({
     // Please check documentation for other Touchpoint settings that can be configured
-
-      //alarm("windowTouchpointinitialize");
-        
     settings:{
       containerStyle: {
         borderRadius: '8px',
@@ -14,7 +10,6 @@
         '0px 3px 5px 0px rgba(0,0,0,0.2), 0px 1px 18px 0px rgba(0,0,0,0.12), 0px 6px 10px 0px rgba(0,0,0,0.14)'
       },
       //locale: window.starsweb.app.locale,
-
        locale: "ru"
     },
     visitor: {
@@ -25,9 +20,8 @@
       // tableSize: window.starsweb.app.csatTableSize,
       // rm_pm: window.starsweb.app.csatRM_PM,
       // tournamentKey: window.starsweb.app.csatTournKey,
-     
        license: 1234,
-       gameMode: 'cash',  
+       gameMode: 'cash',
        pokerType: 'NLholdem',
        gameSize: 'Micro',
        tableSize: 9,
@@ -50,11 +44,8 @@
     },
   });
 };
-
  if (window.Touchpoint) {
-//       alarm('window.Touchpoint');
     const embeddedDistURL = window.Touchpoint.getEmbeddedDistURL();
-   
     if (embeddedDistURL) {
         document.getElementById("main-content").src = embeddedDistURL;
     } else {
@@ -62,11 +53,7 @@
         // e.g document.getElementById("<<web element ID>>").style.display = 'none'
     }
   } else {
-    
-//        var a=1;// window.starsweb.app.site;
-//var b=window.starsweb.app.site;
-
-  window.addEventListener("TouchpointLoaded", function() {
+    window.addEventListener("TouchpointLoaded", function() {
       const embeddedDistURL = window.Touchpoint.getEmbeddedDistURL();
     if (embeddedDistURL) {
         document.getElementById("main-content").src = embeddedDistURL;
@@ -75,8 +62,7 @@
         // e.g document.getElementById("<<web element ID>>").style.display = 'none'
     }
     });
-  }  
-  
+  }
 </script>
 <script async defer src="https://touchpoint-sdk.alida.com/main.js"></script>
 </head>
