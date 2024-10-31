@@ -11,7 +11,7 @@
         '0px 3px 5px 0px rgba(0,0,0,0.2), 0px 1px 18px 0px rgba(0,0,0,0.12), 0px 6px 10px 0px rgba(0,0,0,0.14)'
       },
       //locale: window.starsweb.app.locale,
-      
+      concole.log(" window.Touchpoint.initialize");
        locale: "ru"
     },
     visitor: {
@@ -49,7 +49,7 @@
 };
 
  if (window.Touchpoint) {
- 
+       concole.log(" window.Touchpoint");
     const embeddedDistURL = window.Touchpoint.getEmbeddedDistURL();
    
     if (embeddedDistURL) {
@@ -59,7 +59,10 @@
         // e.g document.getElementById("<<web element ID>>").style.display = 'none'
     }
   } else {
-    window.addEventListener("TouchpointLoaded", function() {
+    
+         concole.log("NOT window.Touchpoint");
+
+  window.addEventListener("TouchpointLoaded", function() {
       const embeddedDistURL = window.Touchpoint.getEmbeddedDistURL();
     if (embeddedDistURL) {
         document.getElementById("main-content").src = embeddedDistURL;
