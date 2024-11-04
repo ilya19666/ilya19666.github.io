@@ -1,7 +1,7 @@
 <head>
-<script defer>
- window.topInit = function () {
-       window.Touchpoint.initialize({
+<script>
+  window.topInit = function () {
+      Touchpoint.initialize({
     // Please check documentation for other Touchpoint settings that can be configured
     settings:{
       containerStyle: {
@@ -9,33 +9,35 @@
         boxShadow:
         '0px 3px 5px 0px rgba(0,0,0,0.2), 0px 1px 18px 0px rgba(0,0,0,0.12), 0px 6px 10px 0px rgba(0,0,0,0.14)'
       },
-      //locale: window.starsweb.app.locale,
-       locale: "ru"
+      locale: window.starsweb.app.locale,
+      
+      //  locale: "fr"
     },
     visitor: {
-      // license: window.starsweb.app.site,
-      // gameMode: window.starsweb.app.csatGameMode,
-      // pokerType: window.starsweb.app.csatPoker,
-      // gameSize: window.starsweb.app.csatGameSize,
-      // tableSize: window.starsweb.app.csatTableSize,
-      // rm_pm: window.starsweb.app.csatRM_PM,
-      // tournamentKey: window.starsweb.app.csatTournKey,
-       license: 1234,
-       gameMode: 'cash',
-       pokerType: 'NLholdem',
-       gameSize: 'Micro',
-       tableSize: 9,
-       rm_pm: false,
-       tournamentKey: 0,
+       license: window.starsweb.app.site,
+       gameMode: window.starsweb.app.csatGameMode,
+       pokerType: window.starsweb.app.csatPoker,
+       gameSize: window.starsweb.app.csatGameSize,
+       tableSize: window.starsweb.app.csatTableSize,
+       rm_pm: window.starsweb.app.csatRM_PM,
+       tournamentKey: window.starsweb.app.csatTournKey,
+     
+       //license: 1234,
+       //gameMode: 'cash',  
+       //pokerType: 'NLholdem',
+       //gameSize: 'Micro',
+       //tableSize: 9,
+       //rm_pm: false,
+       //tournamentKey: 0,
     },
     user_attributes: {
         license: 'number',
         gameMode: 'string',
-        pokerType: 'string',
-        gameSize: 'string',
-        tableSize: 'number',
-        rm_pm: 'boolean',
-        tournamentKey: 'number',
+        gameMode: 'string',
+        gameMode: 'string',
+        gameMode: 'number',
+        gameMode: 'boolean',
+        gameMode: 'number',
     },
     publisher: {
       // Please do not make edits below
@@ -44,28 +46,9 @@
     },
   });
 };
- if (window.Touchpoint) {
-    const embeddedDistURL = window.Touchpoint.getEmbeddedDistURL();
-    if (embeddedDistURL) {
-        document.getElementById("main-content").src = embeddedDistURL;
-    } else {
-        // Hide the iframe or web element that was supposed to contain the embedded distribution
-        // e.g document.getElementById("<<web element ID>>").style.display = 'none'
-    }
-  } else {
-    window.addEventListener("TouchpointLoaded", function() {
-      const embeddedDistURL = window.Touchpoint.getEmbeddedDistURL();
-    if (embeddedDistURL) {
-        document.getElementById("main-content").src = embeddedDistURL;
-    } else {
-        // Hide the iframe or web element that was supposed to contain the embedded distribution
-        // e.g document.getElementById("<<web element ID>>").style.display = 'none'
-    }
-    });
-  }
 </script>
 <script async defer src="https://touchpoint-sdk.alida.com/main.js"></script>
 </head>
 <body>
-  <iframe id="main-content" style="postition:absolute; width: 200px; height: 400px;">
+  
 </body>
