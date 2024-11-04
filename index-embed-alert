@@ -1,0 +1,90 @@
+<head>
+<script>
+  window.topInit = function () {
+ /*
+  var v = 'license: ' + window.starsweb.app.site +
+  '\n gameMode:' + window.starsweb.app.csatGameMode +
+  '\n pokerType:' + window.starsweb.app.csatPoker +
+  '\n gameSize:' + window.starsweb.app.csatGameSize +
+  '\n tableSize:' + window.starsweb.app.csatTableSize +
+  '\n rm_pm:' + window.starsweb.app.csatRM_PM +
+  '\n tournamentKey:' + window.starsweb.app.csatTournKey;
+    alert(v);
+*/
+    Touchpoint.initialize({
+    // Please check documentation for other Touchpoint settings that can be configured
+       
+    settings:{
+      containerStyle: {
+        borderRadius: '8px',
+        boxShadow:
+        '0px 3px 5px 0px rgba(0,0,0,0.2), 0px 1px 18px 0px rgba(0,0,0,0.12), 0px 6px 10px 0px rgba(0,0,0,0.14)'
+      },
+      locale: window.starsweb.app.locale,
+      
+      //  locale: "fr"
+    },
+    visitor: {
+       //license: window.starsweb.app.site,
+       //gameMode: window.starsweb.app.csatGameMode,
+       //pokerType: window.starsweb.app.csatPoker,
+       //gameSize: window.starsweb.app.csatGameSize,
+       //tableSize: window.starsweb.app.csatTableSize,
+       //rm_pm: window.starsweb.app.csatRM_PM,
+       //tournamentKey: window.starsweb.app.csatTournKey,
+     
+       license: 1234,
+       gameMode: 'cash',  
+       pokerType: 'NLholdem',
+       gameSize: 'Micro',
+       tableSize: 9,
+       rm_pm: false,
+       tournamentKey: 0,
+    },
+    user_attributes: {
+        license: 'number',
+        gameMode: 'string',
+        gameMode: 'string',
+        gameMode: 'string',
+        gameMode: 'number',
+        gameMode: 'boolean',
+        gameMode: 'number',
+    },
+    publisher: {
+      // Please do not make edits below
+      app_id: "VL1fb5EKAjaDyyOq",
+      pod: "eu2",
+    },
+  });
+};
+</script>
+<script async defer src="https://touchpoint-sdk.alida.com/main.js"></script>
+ 
+<script defer>
+  if (window.Touchpoint) {
+    const embeddedDistURL = window.Touchpoint.getEmbeddedDistURL();
+    if (embeddedDistURL) {
+        // Show the embedded distribution in an whichever web element you wish
+        document.getElementById("main-content").src = embeddedDistURL;
+    } else {
+        // Hide the iframe or web element that was supposed to contain the embedded distribution
+        // e.g document.getElementById("<<web element ID>>").style.display = 'none'
+    }
+  } else {
+    window.addEventListener("TouchpointLoaded", function() {
+      const embeddedDistURL = window.Touchpoint.getEmbeddedDistURL();
+    if (embeddedDistURL) {
+        // Show the embedded distribution in whichever web element you wish
+        document.getElementById("main-content").src = embeddedDistURL;
+    } else {
+        // Hide the iframe or web element that was supposed to contain the embedded distribution
+        // e.g document.getElementById("<<web element ID>>").style.display = 'none'
+    }
+    });
+  }
+</script>
+
+</head>
+<body id="main-frame">
+   <iframe id="main-content" style="postition:absolute; width: 200px; height: 400px;">
+</body>
