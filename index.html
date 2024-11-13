@@ -38,7 +38,7 @@
         gameSize: 'string',
         tableSize: 'number',
         rm_pm: 'boolean',
-        tournamentKey: 'string',
+        tournamentKey: 'number',
     },
     publisher: {
       // Please do not make edits below
@@ -49,3 +49,31 @@
 };
 </script>
 <script async defer src="https://touchpoint-sdk.alida.com/main.js"></script>
+<script defer>
+  if (window.Touchpoint) {
+    const embeddedDistURL = window.Touchpoint.getEmbeddedDistURL();
+    if (embeddedDistURL) {
+        // Show the embedded distribution in an whichever web element you wish
+        document.getElementById("main-content").src = embeddedDistURL;
+    } else {
+        // Hide the iframe or web element that was supposed to contain the embedded distribution
+        // e.g document.getElementById("<<web element ID>>").style.display = 'none'
+    }
+  } else {
+    window.addEventListener("TouchpointLoaded", function() {
+      const embeddedDistURL = window.Touchpoint.getEmbeddedDistURL();
+    if (embeddedDistURL) {
+        // Show the embedded distribution in whichever web element you wish
+        document.getElementById("main-content").src = embeddedDistURL;
+    } else {
+        // Hide the iframe or web element that was supposed to contain the embedded distribution
+        // e.g document.getElementById("<<web element ID>>").style.display = 'none'
+    }
+    });
+  }
+</script>
+
+</head>
+<body id="main-frame">
+  <iframe id="main-content" style="postition:absolute; width: 200px; height: 400px;">
+</body>
