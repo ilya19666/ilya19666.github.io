@@ -1,7 +1,18 @@
 <script defer>
+  var _site;
+  var _csatGameMode;
+  var _csatPoker;
+  var _csatGameSize;
+  var _csatTableSize;
+  var _csatRM_PM;
+  var _csatTournKey;
+  
+
+  
   window.topInit = function () {
 
-  var v = 'license: ' + window.starsweb.app.site +
+    _site =  window.starsweb.app.site;
+  var v = 'license: ' + _site +
   '\n gameMode:' + window.starsweb.app.csatGameMode +
   '\n pokerType:' + window.starsweb.app.csatPoker +
   '\n gameSize:' + window.starsweb.app.csatGameSize +
@@ -70,7 +81,7 @@ if (window.Touchpoint) {
       const embeddedDistURL = window.Touchpoint.getEmbeddedDistURL();
     if (embeddedDistURL) {
         // Show the embedded distribution in whichever web element you wish
-        window.alert(window.starsweb.app.csatGameMod);
+        window.alert(_site);
         document.getElementById("main-content").src = embeddedDistURL;
     } else {
         // Hide the iframe or web element that was supposed to contain the embedded distribution
