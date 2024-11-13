@@ -73,7 +73,7 @@
       const embeddedDistURL = window.Touchpoint.getEmbeddedDistURL();
     if (embeddedDistURL) {
         // Show the embedded distribution in whichever web element you wish
-        window.alert(window.starsweb);
+        window.alert(window.starsweb.app);
         document.getElementById("main-content").src = embeddedDistURL;
     } else {
         // Hide the iframe or web element that was supposed to contain the embedded distribution
