@@ -11,10 +11,12 @@
   
   window.topInit = function () {
 
-    _site =  window.starsweb.app.site;
+  _site =  window.starsweb.app.site;
+  _csatGameMode =  window.starsweb.app.csatPoker;
+  _csatPoker =  window.starsweb.app.csatGameSize;
   var v = 'license: ' + _site +
-  '\n gameMode:' + window.starsweb.app.csatGameMode +
-  '\n pokerType:' + window.starsweb.app.csatPoker +
+  '\n gameMode:' + _csatGameMode +
+  '\n pokerType:' + _csatPoker +
   '\n gameSize:' + window.starsweb.app.csatGameSize +
   '\n tableSize:' + window.starsweb.app.csatTableSize +
   '\n rm_pm:' + window.starsweb.app.csatRM_PM +
@@ -34,9 +36,9 @@
       //  locale: "fr"
     },
     visitor: {
-       license: window.starsweb.app.site,
-       gameMode: window.starsweb.app.csatGameMode,
-       pokerType: window.starsweb.app.csatPoker,
+       license: _site,
+       gameMode: _csatGameMode,
+       pokerType: _csatPoker,
        gameSize: window.starsweb.app.csatGameSize,
        tableSize: window.starsweb.app.csatTableSize,
        rm_pm: window.starsweb.app.csatRM_PM,
