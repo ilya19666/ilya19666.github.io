@@ -7,21 +7,15 @@
   var _csatRM_PM;
   var _csatTournKey;
   
-
-  
   window.topInit = function () {
 
   _site =  window.starsweb.app.site;
   _csatGameMode =  window.starsweb.app.csatPoker;
   _csatPoker =  window.starsweb.app.csatGameSize;
-  var v = 'license: ' + _site +
-  '\n gameMode:' + _csatGameMode +
-  '\n pokerType:' + _csatPoker +
-  '\n gameSize:' + window.starsweb.app.csatGameSize +
-  '\n tableSize:' + window.starsweb.app.csatTableSize +
-  '\n rm_pm:' + window.starsweb.app.csatRM_PM +
-  '\n tournamentKey:' + window.starsweb.app.csatTournKey;
-    alert(v);
+  _csatGameSize =  window.starsweb.app.csatGameSize;
+  _csatTableSize =  window.starsweb.app.csatTableSize;
+  _csatRM_PM =  window.starsweb.app.csatRM_PM;
+  _csatTournKey =  window.starsweb.app.csatGameSize;
     
     Touchpoint.initialize(
     {
@@ -39,10 +33,10 @@
        license: _site,
        gameMode: _csatGameMode,
        pokerType: _csatPoker,
-       gameSize: window.starsweb.app.csatGameSize,
-       tableSize: window.starsweb.app.csatTableSize,
-       rm_pm: window.starsweb.app.csatRM_PM,
-       tournamentKey: window.starsweb.app.csatTournKey,
+       gameSize: _csatGameSize,
+       tableSize: _csatTableSize,
+       rm_pm: _csatRM_PM,
+       tournamentKey: _csatTournKey,
      
        //license: 1234,
        //gameMode: 'cash',  
@@ -83,7 +77,17 @@ if (window.Touchpoint) {
       const embeddedDistURL = window.Touchpoint.getEmbeddedDistURL();
     if (embeddedDistURL) {
         // Show the embedded distribution in whichever web element you wish
-        window.alert(_site);
+
+        var v = 'license: ' + _site +
+        '\n gameMode:' + _csatGameMode +
+        '\n pokerType:' + _csatPoker +
+        '\n gameSize:' + _csatGameSize +
+        '\n tableSize:' + _csatTableSize +
+        '\n rm_pm:' +_csatRM_PM +
+        '\n tournamentKey:' + _csatTournKey;
+          alert(v);
+
+      
         document.getElementById("main-content").src = embeddedDistURL;
     } else {
         // Hide the iframe or web element that was supposed to contain the embedded distribution
