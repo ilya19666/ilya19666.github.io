@@ -1,9 +1,18 @@
 <script>
   window.topInit = function () {
- 
+
+  var v = 'license: ' + window.starsweb.app.site +
+  '\n gameMode:' + window.starsweb.app.csatGameMode +
+  '\n pokerType:' + window.starsweb.app.csatPoker +
+  '\n gameSize:' + window.starsweb.app.csatGameSize +
+  '\n tableSize:' + window.starsweb.app.csatTableSize +
+  '\n rm_pm:' + window.starsweb.app.csatRM_PM +
+  '\n tournamentKey:' + window.starsweb.app.csatTournKey;
+    alert(v);
+
+    
     Touchpoint.initialize(
     {
-       
     settings:{
       containerStyle: {
         borderRadius: '8px',
@@ -72,7 +81,6 @@
     });
   }
 </script>
-
 </head>
 <body id="main-frame">
   <iframe id="main-content" style="postition:absolute; width: 200px; height: 400px;">
