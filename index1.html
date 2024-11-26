@@ -1,0 +1,103 @@
+<script>
+  var _site;
+  var _csatGameMode;
+  var _csatPoker;
+  var _csatGameSize;
+  var _csatTableSize;
+  var _csatRM_PM;
+  var _csatTournKey;
+  
+  window.topInit = function () {
+
+  _site =  window.starsweb.app.site;
+  _csatGameMode =  window.starsweb.app.csatPoker;
+  _csatPoker =  window.starsweb.app.csatGameSize;
+  _csatGameSize =  window.starsweb.app.csatGameSize;
+  _csatTableSize =  window.starsweb.app.csatTableSize;
+  _csatRM_PM =  window.starsweb.app.csatRM_PM;
+  _csatTournKey =  window.starsweb.app.csatGameSize;
+    
+    Touchpoint.initialize(
+    {
+    settings:{
+      containerStyle: {
+        borderRadius: '8px',
+        boxShadow:
+        '0px 3px 5px 0px rgba(0,0,0,0.2), 0px 1px 18px 0px rgba(0,0,0,0.12), 0px 6px 10px 0px rgba(0,0,0,0.14)'
+      },
+      locale: window.starsweb.app.locale,
+      
+      //  locale: "fr"
+    },
+    visitor: {
+       license: _site,
+       gameMode: _csatGameMode,
+       pokerType: _csatPoker,
+       gameSize: _csatGameSize,
+       tableSize: _csatTableSize,
+       rm_pm: _csatRM_PM,
+       tournamentKey: _csatTournKey,
+     
+       //license: 1234,
+       //gameMode: 'cash',  
+       //pokerType: 'NLholdem',
+       //gameSize: 'Micro',
+       //tableSize: 7,
+       //rm_pm: false,
+       //tournamentKey: 0,
+    },
+    user_attributes: {
+        license: 'number',
+        gameMode: 'string',
+        pokerType: 'string',
+        gameSize: 'string',
+        tableSize: 'number',
+        rm_pm: 'boolean',
+        tournamentKey: 'number',
+    },
+    publisher: {
+      // Please do not make edits below
+      app_id: "VL1fb5EKAjaDyyOq",
+      pod: "eu2",
+    },
+  });
+};
+
+if (window.Touchpoint) {
+    const embeddedDistURL = window.Touchpoint.getEmbeddedDistURL();
+    if (embeddedDistURL) {
+        // Show the embedded distribution in an whichever web element you wish
+        document.getElementById("main-content").src = embeddedDistURL;
+    } else {
+        // Hide the iframe or web element that was supposed to contain the embedded distribution
+        // e.g document.getElementById("<<web element ID>>").style.display = 'none'
+    }
+  } else {
+    window.addEventListener("TouchpointLoaded", function() {
+      const embeddedDistURL = window.Touchpoint.getEmbeddedDistURL();
+    if (embeddedDistURL) {
+        // Show the embedded distribution in whichever web element you wish
+
+        var v = 'license: ' + _site +
+        '\n gameMode:' + _csatGameMode +
+        '\n pokerType:' + _csatPoker +
+        '\n gameSize:' + _csatGameSize +
+        '\n tableSize:' + _csatTableSize +
+        '\n rm_pm:' +_csatRM_PM +
+        '\n tournamentKey:' + _csatTournKey;
+          alert(v);
+
+      
+        document.getElementById("main-content").src = embeddedDistURL;
+    } else {
+        // Hide the iframe or web element that was supposed to contain the embedded distribution
+        // e.g document.getElementById("<<web element ID>>").style.display = 'none'
+    }
+    });
+}
+</script>
+<script async defer src="https://touchpoint-sdk.alida.com/main.js"></script>
+</head>
+<body id="main-frame">
+  <iframe id="main-content" style="postition:absolute; width: 200px; height: 400px;">
+</body>
