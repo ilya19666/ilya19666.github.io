@@ -1,9 +1,17 @@
 <script>
   window.topInit = function () {
 
-    if(!window.starsweb)
+    if(window.starsweb== null )
     {
       alert('window_starsweb is 0');
+    }
+    else if(window.starsweb.app == null)
+    {
+       alert('window_starsweb_app is 0');
+    }
+    else if(window.starsweb.app.csatPoker == null)
+    {
+       alert('window_starsweb_app_csatPoker is 0');
     }
     else
     { 
