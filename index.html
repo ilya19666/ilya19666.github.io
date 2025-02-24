@@ -1,7 +1,7 @@
+<head>
 <script>
   window.topInit = function () {
-    //alert(window.starsweb.app.locale),
-    Touchpoint.initialize({
+      Touchpoint.initialize({
     // Please check documentation for other Touchpoint settings that can be configured
     settings:{
       containerStyle: {
@@ -9,8 +9,9 @@
         boxShadow:
         '0px 3px 5px 0px rgba(0,0,0,0.2), 0px 1px 18px 0px rgba(0,0,0,0.12), 0px 6px 10px 0px rgba(0,0,0,0.14)'
       },
-      showCloseButton: false,
       locale: window.starsweb.app.locale,
+      
+      //  locale: "fr"
     },
     visitor: {
        license: window.starsweb.app.site,
@@ -20,8 +21,15 @@
        tableSize: window.starsweb.app.csatTableSize,
        rm_pm: window.starsweb.app.csatRM_PM,
        tournamentKey: window.starsweb.app.csatTournKey,
+     
+       //license: 1234,
+       //gameMode: 'cash',  
+       //pokerType: 'NLholdem',
+       //gameSize: 'Micro',
+       //tableSize: 9,
+       //rm_pm: false,
+       //tournamentKey: 0,
     },
-    //visitor1: window.starsweb.app.visitor1,
     user_attributes: {
         license: 'number',
         gameMode: 'string',
@@ -40,3 +48,7 @@
 };
 </script>
 <script async defer src="https://touchpoint-sdk.alida.com/main.js"></script>
+</head>
+<body>
+  
+</body>
