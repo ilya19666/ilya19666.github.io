@@ -1,7 +1,7 @@
 <script>
   window.topInit = function () {
      alert("333 scat: " + window.starsweb.csat);
-     alert("333 scat: " + window.starsweb.csat.gameMode);
+     alert("333 scat: " + window.starsweb.csat.app.visitordata);
     Touchpoint.initialize({
     // Please check documentation for other Touchpoint settings that can be configured
     settings:{
@@ -12,6 +12,9 @@
       },
       locale: window.starsweb.app.locale,
     },
+    visitor: window.starsweb.csat.app.visitordata,
+      
+      /*
     visitor: {
        license: window.starsweb.app.site,
        gameMode: window.starsweb.app.csatGameMode,
@@ -21,6 +24,7 @@
        rm_pm: window.starsweb.app.csatRM_PM,
        tournamentKey: window.starsweb.app.csatTournKey,
     },
+      */
     user_attributes: {
         license: 'number',
         gameMode: 'string',
