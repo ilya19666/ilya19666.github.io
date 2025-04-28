@@ -1,7 +1,7 @@
 <script>
   window.topInit = function () {
      alert("666 scat: " + window.starsweb.csat);
-     alert("666 scat: " + window.starsweb.csat.app.csatGameMode);
+     alert("666 scat: " + window.starsweb.csat.app.csatGameMode + " \r\n" + window.starsweb.csat.app.csatGameMode + " \r\n" + window.starsweb.csat.app.csatPoker + " \r\n" + window.starsweb.csat.app.csatGameSize);
     Touchpoint.initialize({
     // Please check documentation for other Touchpoint settings that can be configured
     settings:{
@@ -15,13 +15,13 @@
     //visitor: window.starsweb.csat.app.csatGameMode,
       
     visitor: {
-       license: window.starsweb.app.site,
-       gameMode: window.starsweb.app.csatGameMode,
-       pokerType: window.starsweb.app.csatPoker,
-       gameSize: window.starsweb.app.csatGameSize,
-       tableSize: window.starsweb.app.csatTableSize,
-       rm_pm: window.starsweb.app.csatRM_PM,
-       tournamentKey: window.starsweb.app.csatTournKey,
+       license: window.starsweb.csat.app.site,
+       gameMode: window.starsweb.csat.app.csatGameMode,
+       pokerType: window.starsweb.csat.app.csatPoker,
+       gameSize: window.starsweb.csat.app.csatGameSize,
+       tableSize: window.starsweb.csat.app.csatTableSize,
+       rm_pm: window.starsweb.csat.app.csatRM_PM,
+       tournamentKey: window.starsweb.csat.app.csatTournKey,
     },
 
     user_attributes: {
