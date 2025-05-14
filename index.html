@@ -1,6 +1,6 @@
 <script>
   window.topInit = function () {
-    alert("11");
+    alert("22");
     Touchpoint.initialize({
     // Please check documentation for other Touchpoint settings that can be configured
     settings:{
@@ -9,9 +9,20 @@
         boxShadow:
         '0px 3px 5px 0px rgba(0,0,0,0.2), 0px 1px 18px 0px rgba(0,0,0,0.12), 0px 6px 10px 0px rgba(0,0,0,0.14)'
       },
-      locale: window.starsweb.app.locale,
+  //    locale: window.starsweb.app.locale,
+        locale: 'com',
     },
    
+    visitor: {
+       license: 1,
+       gameMode: 'CASH',
+       pokerType: 'Hold'em',
+       gameSize: 'Mini',
+       tableSize: 6,
+       rm_pm: 'rm',
+       tournamentKey: 0,
+    },
+/*
     visitor: {
        license: window.starsweb.app.site,
        gameMode: window.starsweb.app.csatGameMode,
@@ -20,8 +31,8 @@
        tableSize: window.starsweb.app.csatTableSize,
        rm_pm: window.starsweb.app.csatRM_PM,
        tournamentKey: window.starsweb.app.csatTournKey,
-    },
-
+    },  
+*/
     user_attributes: {
         license: 'number',
         gameMode: 'string',
