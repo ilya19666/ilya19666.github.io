@@ -9,32 +9,29 @@
         boxShadow:
         '0px 3px 5px 0px rgba(0,0,0,0.2), 0px 1px 18px 0px rgba(0,0,0,0.12), 0px 6px 10px 0px rgba(0,0,0,0.14)'
       },
-  //    locale: window.starsweb.app.locale,
-        locale: 'com',
+      locale: window.starsweb.app.locale,
     },
    
     visitor: {
-       license: 1,
-       gameMode: 'CASH',
-       pokerType: 'Holdem',
-       gameSize: 'Mini',
-       tableSize: 6,
-       rm_pm: 'rm',
-       tournamentKey: 0,
-    },
-/*
-    visitor: {
+       webID: window.starsweb.auth.webId,
+       timestamp: window.starsweb.csat.app.csatTimestamp,
+       modalLastSeen: window.starsweb.csat.app.csatLastSeen, 
        license: window.starsweb.app.site,
-       gameMode: window.starsweb.app.csatGameMode,
-       pokerType: window.starsweb.app.csatPoker,
-       gameSize: window.starsweb.app.csatGameSize,
-       tableSize: window.starsweb.app.csatTableSize,
-       rm_pm: window.starsweb.app.csatRM_PM,
-       tournamentKey: window.starsweb.app.csatTournKey,
+       platform: window.starsweb.app.platform,
+       gameMode: window.starsweb.csat.app.csatGameMode,
+       pokerType: window.starsweb.csat.app.csatPoker,
+       gameSize: window.starsweb.csat.app.csatGameSize,
+       tableSize: window.starsweb.csat.app.csatTableSize,
+       rm_pm: window.starsweb.csat.app.csatRM_PM,
+       tournamentKey: window.starsweb.csat.app.csatTournKey,
     },  
-*/
+
     user_attributes: {
+        webID: 'string',
+        timestamp: 'string',
+        modalLastSeen: 'number',
         license: 'number',
+        platform: 'number',
         gameMode: 'string',
         pokerType: 'string',
         gameSize: 'string',
