@@ -12,6 +12,7 @@
       locale: window.starsweb.app.locale,
     },
     visitor: {
+       webID: window.starsweb.auth.webId,
        license: window.starsweb.app.site,
        gameMode: window.starsweb.app.csatGameMode,
        pokerType: window.starsweb.app.csatPoker,
@@ -21,6 +22,7 @@
        tournamentKey: window.starsweb.app.csatTournKey,
     },
     user_attributes: {
+        webID: 'string',
         license: 'number',
         gameMode: 'string',
         pokerType: 'string',
