@@ -1,8 +1,7 @@
 <script>
   window.topInit = function () {
-    alert("6");
-    alert(window.starsweb.app);
-    
+    alert("7");
+   
       Touchpoint.initialize({
     // Please check documentation for other Touchpoint settings that can be configured
     settings:{
@@ -18,9 +17,9 @@
        webID: window.starsweb.auth.webId,
        license: window.starsweb.app.site,
        gameMode: window.starsweb.csat.csatGameMode,
-     //  pokerType: window.starsweb.app.csatPoker,
+      // pokerType: window.starsweb.app.csatPoker,
       // gameSize: window.starsweb.app.csatGameSize,
-      // tableSize: window.starsweb.app.csatTableSize,
+       tableSize: window.starsweb.csat.csatTableSize,
       // rm_pm: window.starsweb.app.csatRM_PM,
       // tournamentKey: window.starsweb.app.csatTournKey,
     },
@@ -30,7 +29,7 @@
         gameMode: 'string',
     //    pokerType: 'string',
     //    gameSize: 'string',
-    //    tableSize: 'number',
+        tableSize: 'number',
      //   rm_pm: 'boolean',
     //    tournamentKey: 'number',
     },
