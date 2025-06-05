@@ -1,5 +1,6 @@
 <script>
   window.topInit = function () {
+    alert("1");
       Touchpoint.initialize({
     // Please check documentation for other Touchpoint settings that can be configured
     settings:{
@@ -14,7 +15,7 @@
     visitor: {
        webID: window.starsweb.auth.webId,
        license: window.starsweb.app.site,
-      // gameMode: window.starsweb.app.csatGameMode,
+       gameMode: window.starsweb.app.csatGameMode,
      //  pokerType: window.starsweb.app.csatPoker,
       // gameSize: window.starsweb.app.csatGameSize,
       // tableSize: window.starsweb.app.csatTableSize,
