@@ -16,6 +16,8 @@
     visitor: {
        webID: window.starsweb.auth.webId,
        license: window.starsweb.app.site,
+       timestamp: window.starsweb.csat.app.csatTimestamp,
+       lastSeen: window.starsweb.csat.app.csatLastSeen,
        gameMode: window.starsweb.csat.app.csatGameMode,
        pokerType: window.starsweb.csat.app.csatPoker,
        gameSize: window.starsweb.csat.app.csatGameSize,
@@ -26,6 +28,8 @@
     user_attributes: {
         webID: 'string',
         license: 'number',
+        timestamp: 'string',
+        lastSeen: 'number',
         gameMode: 'string',
         pokerType: 'string',
         gameSize: 'string',
