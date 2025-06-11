@@ -1,6 +1,6 @@
 <script>
   window.topInit = function () {
-     alert("1");
+     alert("2");
       Touchpoint.initialize({
     // Please check documentation for other Touchpoint settings that can be configured
     settings:{
@@ -15,15 +15,15 @@
     visitor: {
        webID: window.starsweb.auth.webId,
        license: window.starsweb.app.site,
-   //    timestamp: window.starsweb.csat.app.csatTimestamp,
-   //    lastSeen: window.starsweb.csat.app.csatLastSeen,
        platform: window.starsweb.app.platform,
        gameMode: window.starsweb.csat.csatGameMode,
        pokerType: window.starsweb.csat.csatPoker,
        gameSize: window.starsweb.csat.csatGameSize,
        tableSize: window.starsweb.csat.csatTableSize,
        rm_pm: window.starsweb.csat.csatRM_PM,
-   //    tournamentKey: window.starsweb.csat.app.csatTournKey,
+       tournamentKey: window.starsweb.csat.csatTournKey,
+       timestamp: window.starsweb.csat.csatTimestamp,
+       lastSeen: window.starsweb.csat.csatLastSeen,
     },
     user_attributes: {
         webID: 'string',
